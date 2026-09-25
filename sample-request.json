@@ -1,0 +1,30 @@
+{
+  "requestId": "t-001",
+  "timeoutMs": 5000,
+  "maxAttempts": 2,
+  "portfolio": {
+    "portfolioId": "PF-1",
+    "holdings": [
+      {"instrumentId": "A", "quantity": 100},
+      {"instrumentId": "B", "quantity": -50}
+    ]
+  },
+  "snapshots": [
+    {"snapshotDate": "2026-09-01", "prices": {"A": 100.0, "B": 20.0}},
+    {"snapshotDate": "2026-09-02", "prices": {"A": 100.2, "B": 20.05}},
+    {"snapshotDate": "2026-09-03", "prices": {"A": 100.4, "B": 20.10}},
+    {"snapshotDate": "2026-09-04", "prices": {"A": 100.6, "B": 20.15}},
+    {"snapshotDate": "2026-09-05", "prices": {"A": 100.8, "B": 20.20}}
+  ],
+  "scenario": {
+    "scenarioId": "SHOCK-1",
+    "version": "2026-09-shock-v1",
+    "type": "SCENARIO_SHOCK",
+    "shocks": {"A": -0.10, "B": 0.05},
+    "correlationInstruments": null,
+    "correlation": null,
+    "historicalReturns": null,
+    "seed": 0,
+    "sampleCount": 0
+  }
+}
