@@ -29,4 +29,8 @@ public record TrialResult(
     public static TrialResult timedOut(String key, long timeoutMs) {
         return new TrialResult(key, TrialStatus.TIMED_OUT, null, null, "timeout after " + timeoutMs + "ms");
     }
+
+    public static TrialResult cancelled(String key, String detail) {
+        return new TrialResult(key, TrialStatus.CANCELLED, null, null, detail);
+    }
 }
